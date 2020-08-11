@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      'apiResponse': '',
+      apiResponse: '',
       isLoaded: false
     };
   }
@@ -15,7 +15,7 @@ class App extends Component {
   handleButtonClick = () => {
     API.getAPIResponse().then((res) => {
       if (res) {
-        this.setState({ 'apiResponse': res.data, isLoaded: true })
+        this.setState({ apiResponse: res.data, isLoaded: true })
       }
       return false;
     });
